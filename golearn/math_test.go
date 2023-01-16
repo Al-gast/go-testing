@@ -32,4 +32,14 @@ func TestAdd(t *testing.T) {
 		assert.Equal(t, -1, c)
 	})
 
+	t.Run("positive and positive", func(t *testing.T) {
+		c := Add(1, 2)
+		assert.Equal(t, 3, c)
+	})
+
+	t.Run("negative and positive", func(t *testing.T) {
+		c := Add(-1, 2)
+		assert.Equal(t, 1, c)
+	})
+
 }
