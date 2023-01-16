@@ -2,6 +2,7 @@ package golearn
 
 import (
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -9,6 +10,13 @@ import (
 func TestAbsolute(t *testing.T) {
 
 	t.Run("negative test case", func(t *testing.T) {
+
+		if testing.Short() {
+			t.Skip()
+		}
+
+		<-time.After(5 * time.Second)
+
 		c := Absolute(-5)
 		assert.Equal(t, 5, c)
 	})
