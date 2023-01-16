@@ -8,10 +8,10 @@ import (
 
 func TestAbsolute(t *testing.T) {
 	c := Absolute(-5)
-	assert.Equal(t, 5, c, "expect 5, got %d", c)
+	assert.Equal(t, 5, c)
 }
 
 func TestAbsolute_WithPositive(t *testing.T) {
 	c := Absolute(5)
-	assert.Equal(t, 5, c, "expect 5, got %d", c)
+	assert.Equal(t, 5, c)
 }
