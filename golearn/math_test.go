@@ -7,11 +7,29 @@ import (
 )
 
 func TestAbsolute(t *testing.T) {
-	c := Absolute(-5)
-	assert.Equal(t, 5, c)
+
+	t.Run("negative test case", func(t *testing.T) {
+		c := Absolute(-5)
+		assert.Equal(t, 5, c)
+	})
+
+	t.Run("positive test case", func(t *testing.T) {
+		c := Absolute(5)
+		assert.Equal(t, 5, c)
+	})
+
 }
 
-func TestAbsolute_WithPositive(t *testing.T) {
-	c := Absolute(5)
-	assert.Equal(t, 5, c)
+func TestAdd(t *testing.T) {
+
+	t.Run("negative and negative", func(t *testing.T) {
+		c := Add(-1, -2)
+		assert.Equal(t, -3, c)
+	})
+
+	t.Run("positive and negative", func(t *testing.T) {
+		c := Add(1, -2)
+		assert.Equal(t, -1, c)
+	})
+
 }
